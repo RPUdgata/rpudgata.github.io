@@ -1,0 +1,385 @@
+body {
+    font-family: 'Book Antiqua', Palatino, serif;
+    margin: 0;
+    padding: 0;
+    background: #121212; /* Black background for the whole page */
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 7680px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    background-color: #1e1e1e; /* Dark grey background for container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    transition: height 0.3s ease;
+}
+
+.header {
+    text-align: center;
+    background: linear-gradient(to right, #9400D3, #4B0082, #0000FF, #008000, #FFFF00, #FFA500, #FF0000);
+    color: #ffffff;
+    padding: 50px 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 5em;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 2em;
+}
+
+/* Navigation Settings: Begin */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    border-bottom: 10px solid #cc973cb8;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8em;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #fff; /* Change background to white */
+    color: #000; /* Change text color to black */
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Navigation Settings: End */
+
+
+/* Section Settings: Begin */
+
+.section {
+    margin-bottom: 20px;
+    text-align: center; /* Centering the section titles */
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    color: #cc973cb8; 
+    padding-bottom: 7.5px;
+    font-size: 2.5em;
+    justify-content: center;
+    border-bottom: 10px solid #cc973cb8;
+}
+
+/* Section Settings: End */
+
+/* About Settings: Begin */
+
+.about {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 400px; /* Adjust size as needed */
+    height: 400px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.profile-detail p {
+    color: #ffffff; /* White text */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: justify;
+    margin-bottom: 20px;
+    width: 90%; /* Ensure full width */
+}
+
+/* About Settings: End */
+
+/* Skills Settings: Begin */
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.skill-box {
+    background: #cc973cb8;
+    color: #fff;
+    width: 20%; /* Reduced size */
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Ensure proper positioning for child elements */
+    margin-bottom: 20px; /* Adjust margin */
+}
+
+.skill-box h3 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.5em;
+    color: #fff; /* White text */
+    transition: color 0.3s ease;
+}
+
+.skill-box:hover,
+.skill-box:focus-within {
+    background: #000000; /* Darker background on hover/focus */
+}
+
+.skill-box:hover h3,
+.skill-box:focus-within h3 {
+    color: #c7c5c2; /* Tomato red text on hover/focus */
+    border-bottom: 4px solid #cc973cb8; /* Tomato red bottom border */
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position the list below the skill-box */
+    left: 0;
+    background: linear-gradient(to right, #9400D3, #4B0082, #0000FF, #008000, #FFFF00, #FFA500, #FF0000); /* Black background for skill items */
+    border-radius: 4px;
+    width: calc(100% - 20px); /* Adjust width as needed */
+    margin-top: 10px; /* Add some space between skill-box and skills-list */
+    padding: 10px;
+}
+
+.skills-list li {
+    color: #000000; /* Black text */
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.skill-box:hover .skills-list,
+.skill-box:focus-within .skills-list {
+    display: block; /* Show the list on hover/focus */
+}
+
+/* Skill Settings: End */
+
+/* Project Settings: Begin */
+
+.pro-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.pro-list {
+    background: #cc973cb8;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Ensure proper positioning for child elements */
+    margin-bottom: 20px;
+    width: 100%; /* Ensure full width */
+    text-align: justify; /* Center text */
+}
+
+.pro-list li {
+    list-style-type: none;
+    color: #ffffff; /* White text */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.pro-list:hover,
+.pro-list:focus-within {
+    background: #000000; /* Darker background on hover/focus */
+}
+
+.pro-list:hover li,
+.pro-list:focus-within li {
+    color: #c7c5c2; /* Tomato red text on hover/focus */
+}
+
+.pro-detail {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Initially hidden */
+    position: absolute; /* Ensure the detail content is within the document flow */
+    top: 100%; /* Position the list below the pro-list */
+    left: 0;
+    background: linear-gradient(to right, #9400D3, #4B0082, #0000FF, #008000, #FFFF00, #FFA500, #FF0000); /* Black background for skill items */
+    border-radius: 4px;
+    width: calc(100% - 20px); /* Adjust width as needed */
+    margin-top: 10px; /* Add some space between pro-list and pro-detail */
+    padding: 10px;
+    max-height: 1000px; /* Set a maximum height for content */
+    transition: display 0.3s ease;
+    z-index: 10; /* Ensure the detail content is above other elements */
+}
+
+.pro-detail p {
+    color: #000000; /* Black text */
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: justify;
+}
+
+.pro-list:hover .pro-detail,
+.pro-list:focus-within .pro-detail {
+    display: block; /* Show the list on hover/focus */
+    visibility: visible; /* Ensure visibility */
+    opacity: 1; /* Ensure full opacity */
+    pointer-events: auto; /* Enable pointer events */
+}
+
+/* Project Settings: End */
+
+/* Publication Settings: Begin */
+
+.pub-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.pub-list {
+    background: #cc973cb8;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Ensure proper positioning for child elements */
+    margin-bottom: 20px;
+    width: 100%; /* Ensure full width */
+    text-align: justify; /* Center text */
+}
+
+.pub-list li {
+    list-style-type: none;
+    color: #ffffff; /* White text */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.pub-list:hover,
+.pub-list:focus-within {
+    background: #000000; /* Darker background on hover/focus */
+}
+
+.pub-list:hover li,
+.pub-list:focus-within li {
+    color: #c7c5c2; /* Tomato red text on hover/focus */
+}
+
+.pub-detail {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position the list below the pub-list */
+    left: 0;
+    background: linear-gradient(to right, #9400D3, #4B0082, #0000FF, #008000, #FFFF00, #FFA500, #FF0000); /* Black background for skill items */
+    border-radius: 4px;
+    width: calc(100% - 20px); /* Adjust width as needed */
+    margin-top: 10px; /* Add some space between pub-list and pub-detail */
+    padding: 10px;
+    max-height: 1000px; /* Set a maximum height for content */
+    transition: display 0.3s ease;
+}
+
+.pub-detail p {
+    color: #000000; /* Black text */
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: justify;
+}
+
+.pub-list:hover .pub-detail,
+.pub-list:focus-within .pub-detail {
+    display: block; /* Show the list on hover/focus */
+    visibility: visible; /* Ensure visibility */
+    opacity: 1; /* Ensure full opacity */
+    pointer-events: auto; /* Enable pointer events */
+}
+
+/* Publication Settings: End */
+
+/* Contact Settings: Begin */
+
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Aligns the images vertically based on their center lines */
+    gap: 200px; /* Space between icons */
+    height: 200px; /* Fixed height for the container */
+    margin-top: 20px;
+}
+
+.contact-icons img {
+    max-height: 100%; /* Ensures images do not exceed the container's height */
+}
+
+.contact-icon:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Contact Settings: End */
+
+@media (max-width: 1500px) {
+    .container {
+        padding: 10px;
+    }
+    .header {
+        padding: 30px 10px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .header p {
+        font-size: 1em;
+    }
+    .navigation {
+        padding: 10px;
+    }
+    .navigation a {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-box {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+}
